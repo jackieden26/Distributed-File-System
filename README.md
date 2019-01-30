@@ -1,17 +1,17 @@
 Files: manager.py, server.py,client.py
 
-##### Known CSIF Issues #####
+### Known CSIF Issues ###
   1. In order to use CSIF computers as hosts, a manager has to setup "passwordless login" for his/her account. See http://csifdocs.cs.ucdavis.edu/about-us/csif-general-faq#TOC-How-do-I-set-up-SSH-keys-to-allow-me-to-login-to-the-CSIF-computers-without-a-password-
 
   2. If the hosts are on CSIF, clients have to be on CSIF as well. See CSIF related socket problem stated in blogpost from Thursday, February 8, 10:25 am here: http://heather.cs.ucdavis.edu/~matloff/145/Blog.html
 
 
 
-##### Instructions #####
+### Instructions ###
   Command size: 512 characters
   Maximum clients: 128
 
-%%% Manager %%%
+#### Manager ####
   1. Make sure manager.py and server.py are in the same directory, and the global variable 'fileName' in manager.py has to be identical to the name of server.py.
 
   2. To set up the hosts, run manager.py in interactive mode using command 'python -i manager.py'. In interactive mode, call sysStart(hostList, portNum) with the first argument to be a list of hosts (INCLUDES USERNAME IF IT'S REQUIRED TO GAIN ACCESS) and the second argument to be the port number.
@@ -23,7 +23,7 @@ Files: manager.py, server.py,client.py
   4. Close the program by calling 'quit()' or using CTRL+D, or restart or start another list of servers using step 2.
 
 
-%%% Client %%%
+#### Client ####
   1. Run client.py in interactive mode using command 'python -i client.py'.
 
   2. To initialize, call function dInit(hostList, portnum) with the list of hosts and port number given by the manager/host/person-who's-in-charge-of-the-servers.
